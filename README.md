@@ -40,3 +40,7 @@ GitHub Actionsで事前に用意されたJPGファイルをエンコードし、
 
 ## Licence
 BSD-3-Clause
+
+## 謝辞
+このパッケージのテストにはryuichiueda氏の
+[Dockerイメージ](https://hub.docker.com/repository/docker/ryuichiueda/ubuntu22.04-ros2)を使用させていただきました
