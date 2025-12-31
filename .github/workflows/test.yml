@@ -44,8 +44,10 @@ jobs:
           export ROS_DISTRO=""
           export ROS_PYTHON_VERSION=""
           export ROS_VERSION=""
+          set +u
           source /opt/ros/humble/setup.bash
           source install/setup.bash
+          set -u
 
           ros2 run base64_encoder base64-encoder-topic > /tmp/base64_node.log 2>&1 &
           NODE_PID=$!
