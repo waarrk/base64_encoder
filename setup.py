@@ -14,7 +14,7 @@ setup(
     install_requires=['setuptools'],
     zip_safe=True,
     maintainer='waarrk',
-    maintainer_email='washioyusaku@icloud.com',
+    maintainer_email='s22c1704za@s.chibakoudai.jp}',
     description='Tiny Base64 encoder from File Path to Base64 Topic',
     license='BSD-3-Clause',
     extras_require={
