@@ -3,9 +3,12 @@
 <package format="3">
   <name>base64_encoder</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
-  <maintainer email="washioyusaku@icloud.com">waarrk</maintainer>
-  <license>TODO: License declaration</license>
+  <description>Tiny Base64 encoder with a simple CLI (encode-only).</description>
+  <maintainer email="s22c1704za@s.chibakoudai.jp">waarrk</maintainer>
+  <license>BSD-3-Clause</license>
+
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
