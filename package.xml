@@ -2,7 +2,7 @@
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
   <name>base64_encoder</name>
-  <version>0.0.0</version>
+  <version>1.0.0</version>
   <description>Tiny Base64 encoder from File Path to Base64 Topic</description>
   <maintainer email="s22c1704za@s.chibakoudai.jp">waarrk</maintainer>
   <license>BSD-3-Clause</license>
