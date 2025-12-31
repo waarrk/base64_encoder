@@ -35,7 +35,7 @@ source install/setup.bash
    ros2 topic echo /encoded --full-length
    ```
 
-# Test
+## Test
 GitHub Actionsで事前に用意されたJPGファイルをエンコードし、期待されるBase64文字列と比較しています
 
 ## Licence
