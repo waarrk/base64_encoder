@@ -37,6 +37,7 @@ jobs:
           set -euo pipefail
           cd /root/ros2_ws
           export AMENT_TRACE_SETUP_FILES=0
+          export AMENT_PYTHON_EXECUTABLE=/usr/bin/python3
           source /opt/ros/humble/setup.bash
           source install/setup.bash
 
