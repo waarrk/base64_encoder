@@ -3,7 +3,7 @@
 <package format="3">
   <name>base64_encoder</name>
   <version>0.0.0</version>
-  <description>Tiny Base64 encoder with a simple CLI (encode-only).</description>
+  <description>Tiny Base64 encoder from File Path to Base64 Topic</description>
   <maintainer email="s22c1704za@s.chibakoudai.jp">waarrk</maintainer>
   <license>BSD-3-Clause</license>
 

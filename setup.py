@@ -15,8 +15,8 @@ setup(
     zip_safe=True,
     maintainer='waarrk',
     maintainer_email='washioyusaku@icloud.com',
-    description='TODO: Package description',
-    license='TODO: License declaration',
+    description='Tiny Base64 encoder from File Path to Base64 Topic',
+    license='BSD-3-Clause',
     extras_require={
         'test': [
             'pytest',
@@ -24,6 +24,8 @@ setup(
     },
     entry_points={
         'console_scripts': [
+            'base64-encoder=base64_encoder.cli:main',
+            'base64-encoder-topic=base64_encoder.encoded_node:main',
         ],
     },
 )
