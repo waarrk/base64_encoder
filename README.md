@@ -33,8 +33,6 @@ source install/setup.bash
    ```
 2. 別ターミナルでファイルパスを publish
    ```bash
-   source /opt/ros/humble/setup.bash
-   source install/setup.bash
    ros2 topic pub --once /input_path std_msgs/String "{data: path/to/your/file.txt}"
    ```
 3. 出力を確認
