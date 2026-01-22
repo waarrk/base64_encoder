@@ -37,36 +37,5 @@ jobs:
 
       - name: Check
         run: |
-          set -euo pipefail
-          cd /root/ros2_ws
-          export AMENT_TRACE_SETUP_FILES=0
-          export AMENT_PYTHON_EXECUTABLE=/usr/bin/python3
-          export AMENT_PREFIX_PATH=""
-          export PYTHONPATH=""
-          export LD_LIBRARY_PATH=""
-          export ROS_DISTRO=""
-          export ROS_PYTHON_VERSION=""
-          export ROS_VERSION=""
-          set +u
-          source /opt/ros/humble/setup.bash
-          source install/setup.bash
-          set -u
-
-          ros2 run base64_encoder base64-encoder-topic > /tmp/base64_node.log 2>&1 &
-          NODE_PID=$!
-          trap 'kill $NODE_PID 2>/dev/null || true' EXIT
-
-          # Start listener
-          timeout 20s ros2 topic echo --once /encoded --full-length > /tmp/encoded_out.txt &
-          ECHO_PID=$!
-          sleep 2
-
-          ros2 topic pub --once /input_path std_msgs/String "{data: /root/ros2_ws/src/base64_encoder/test/resources/ramen.jpg}"
-
-          wait $ECHO_PID
-
-          # Compare
-          diff -u /root/ros2_ws/src/base64_encoder/test/resources/encoded_b64.txt /tmp/encoded_out.txt
-
-          kill $NODE_PID
-          wait $NODE_PID || true
+          set -e
+          bash test/test.bash /root/ros2_ws
