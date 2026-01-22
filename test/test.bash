@@ -15,10 +15,10 @@ timeout 60s ros2 run base64_encoder base64-encoder-topic > /tmp/base64_node.log 
 NODE_PID=$!
 trap 'kill $NODE_PID 2>/dev/null || true' EXIT
 
-timeout 60s ros2 topic echo --once /encoded std_msgs/msg/String --full-length > /tmp/encoded_out.txt &
+timeout 60s ros2 topic echo --qos-reliability reliable --once /encoded std_msgs/msg/String --full-length > /tmp/encoded_out.txt &
 ECHO_PID=$!
 
-
+sleep 1
 ros2 topic pub --once /input_path std_msgs/String "{data: $dir/src/base64_encoder/test/resources/ramen.jpg}"
 
 wait $ECHO_PID
