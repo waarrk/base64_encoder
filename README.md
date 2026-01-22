@@ -51,8 +51,8 @@ data: /9j/4AAQSkZJRgABAQEAkACQAAD/4QlWRXhpZgAATU0AKgAAAAgAAgESAAMAAAABAAEA....
 ## Test
 GitHub Actionsで事前に用意されたJPGファイルをエンコードし、期待されるBase64文字列と比較しています
 
-## Licence
-BSD-3-Clause
+## License
+BSD 3-Clause License
 
 ## 謝辞
 このパッケージのテストにはryuichiueda氏の
