@@ -35,6 +35,14 @@ source install/setup.bash
    ros2 topic echo /encoded --full-length
    ```
 
+## 出力例
+/encoded トピックに次のように出力されます
+```plaintext
+data: /9j/4AAQSkZJRgABAQEAkACQAAD/4QlWRXhpZgAATU0AKgAAAAgAAgESAAMAAAABAAEA....
+```
+
+出力例の全文は[ここ](/test/resources/encoded_b64.txt)にあります
+
 ## Test
 GitHub Actionsで事前に用意されたJPGファイルをエンコードし、期待されるBase64文字列と比較しています
 
