@@ -8,7 +8,7 @@ cd "$dir"
 
 source /opt/ros/humble/setup.bash
 colcon build --packages-select base64_encoder
-source "$dir/.bashrc"
+[ -f "$dir/.bashrc" ] && source "$dir/.bashrc"
 source install/setup.bash
 
 timeout 20s ros2 run base64_encoder base64-encoder-topic > /tmp/base64_node.log 2>&1 &
