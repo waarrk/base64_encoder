@@ -4,7 +4,7 @@ set -e
 dir=~
 [ "$1" != "" ] && dir="$1"
 
-cd "$dir/ros2_ws"
+cd "$dir"
 
 source /opt/ros/humble/setup.bash
 colcon build --packages-select base64_encoder
@@ -19,11 +19,11 @@ timeout 20s ros2 topic echo --once /encoded std_msgs/msg/String --full-length > 
 ECHO_PID=$!
 
 
-ros2 topic pub --once /input_path std_msgs/String "{data: $dir/ros2_ws/src/base64_encoder/test/resources/ramen.jpg}"
+ros2 topic pub --once /input_path std_msgs/String "{data: $dir/src/base64_encoder/test/resources/ramen.jpg}"
 
 wait $ECHO_PID
 
-cat /tmp/encoded_out.txt | diff -u "$dir/ros2_ws/src/base64_encoder/test/resources/encoded_b64.txt" -
+cat /tmp/encoded_out.txt | diff -u "$dir/src/base64_encoder/test/resources/encoded_b64.txt" -
 
 kill $NODE_PID
 wait $NODE_PID || true
