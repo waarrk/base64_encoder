@@ -12,14 +12,21 @@ flowchart TD
     C --> D[encodedトピックに公開]
 ```
 
-## Build
+## How to try
+セットアップ
 ```bash
 source /opt/ros/humble/setup.bash
+
+mkdir -p ~/ros2_ws/src
+cd ~/ros2_ws/src
+git clone https://github.com/waarrk/base64_encoder.git
+cd ~/ros2_ws
 colcon build --packages-select base64_encoder
 source install/setup.bash
 ```
 
-## How to use
+別ターミナルで以下を実行してください
+
 1. ノードを起動
    ```bash
    ros2 run base64_encoder base64-encoder-topic
